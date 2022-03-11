@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dinographic</title>
-    <!-- Include Google fonts: Frijole, Open Sans, Oswald -->
-    <link href="https://fonts.googleapis.com/css?family=Frijole|Open+Sans|Oswald&display=swap" rel="stylesheet">
-    <!-- Normalize browser styles -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link href="app.css" rel="stylesheet">
-    <!-- Link to app.js with defer till HTML render -->
-    <script defer src="app.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Dinographic</title>
+
+	<!-- Normalize browser styles -->
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"> -->
+	<link href="style.css" rel="stylesheet">
+	<!-- Link to app.js with defer till HTML render -->
+	<script defer src="app.js"></script>
 </head>
+
 <body>
-    <header>
-        <h2>Natural History Museum</h2> 
-        <h1>Dinosaurs</h1>
-        <h3>How do you compare?</h3>
-    </header>
-    <!-- Form to get user input -->
-    <form id="dino-compare">
-        <div class="form-container">
-            <p>Name:</p>
-            <input id="name" class="form-field__full" type="text" name="name">
-            <p>Height</p>
-            <label>Feet: <input id="feet" class="form-field__short" type="number" name="feet"></label>
-            <label>inches: <input id="inches" class="form-field__short" type="number" name="inches"></label>
-            <p>Weight:</p>
-            <label><input id="weight" class="form-field__full" type="number" name="weight">lbs</label>
-            <p>Diet:</p>
-            <select id="diet" class="form-field__full" name="diet">
-                <option>Herbavor</option>
-                <option>Omnivor</option>
-                <option>Carnivor</option>
-            </select>
-            <div id="btn">Compare Me!</div>
-        </div>
-    </form>
-    <!-- .grid to attach tiles to -->
-    <main id="grid"></main>
-    <footer>
-        <!-- Include information source -->
-        <p class="fine-print">Data Sourced from <a href="https://www.wikipedia.org/">Wikipedia.org</a>, all numbers are approximations.</p>
-    </footer>
+
+	<header class="container header">
+		<h1>Dinosaurs</h1>
+		<h2>Natural History Museum</h2>
+		<h3>How do you compare?</h3>
+	</header>
+	<!-- .grid to attach tiles to -->
+	<main>
+		<!-- Form to get user input -->
+		<div class="container">
+			<form id="dino-compare" class="card">
+				<section class="grid grid-col-4 col-12">
+					<div class="card-group">
+						<label for="name" class="label-block">Name:</label>
+						<input id="name" class="form-field__full" type="text" name="name">
+					</div>
+					<div class="card-group">
+						<span class="label-block">Height:</span>
+						<label for="feet" class="label-block">feet
+							<input id="feet" type="number" name="feet">
+						</label>
+						<label for="inch" class="label-block">inches
+							<input id="inches" type="number" name="inches">
+						</label>
+					</div>
+					<div class="card-group">
+						<span class="label-block">Height:</span>
+						<label for="weight" class="label-block">
+							lbs
+							<input id="weight" class="btn-block" type="number" name="weight"></label>
+					</div>
+					<div class="card-group">
+						<span class="label-block">Diet:</span>
+						<label for="harbavor" class="label-group label-block">
+							<input type="radio" name="diet" id="harbavor" value="herbavor" checked> Herbavor
+						</label>
+						<label for="omnivor" class="label-group label-block">
+							<input type="radio" name="diet" id="omnivor" value="omnivor"> Omnivor
+						</label>
+						<label for="carnivor" class="label-group label-block">
+							<input type="radio" name="diet" id="carnivor" value="carnivor"> Carnivor
+						</label>
+					</div>
+				</section>
+				<div>
+					<button id="btn" class="btn btn-block btn-primary">Compare Me!</button>
+				</div>
+			</form>
+		</div>
+
+		<section class="grid grid-col-3">
+
+		</section>
+	</main>
+	<footer class="footer container">
+		<!-- Include information source -->
+		<!-- <small class="fine-print">Data Sourced from <a href="https://www.wikipedia.org/">Wikipedia.org</a>, all numbers are
+			approximations.</small> -->
+	</footer>
 </body>
+
 </html>

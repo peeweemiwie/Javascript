@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=PT+Mono&family=Quicksand:wght@300;400&family=Roboto+Mono:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500;900&display=swap');
+
+:root {
+	--dark: #0a0a0a;
+	--light: #ededed;
+	--gray: #a3a3a3;
+	--bg-darker: #242424;
+	--bg-dark: #2e2e2e;
+	--roboto: 'Roboto', sans-serif;
+	--montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--dark);
+	color: var(--light);
+	font-family: var(--roboto);
+	font-weight: 300;
+	margin: 0;
+	min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--montserrat);
+	font-weight: 500;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 50rem;
+}
+
+.card {
+	background-color: var(--bg-darker);
+	border-radius: 10px;
+	padding: 1rem;
+	margin: 0.5em;
+}
+
+.card-group {
+	background-color: var(--bg-dark);
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* form */
+.label-block {
+	display: block;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+.label-group {
+	border: 1px solid var(--gray);
+	border-radius: 10px;
+	padding: 0.1em 0.5em;
+	margin: 0.5em;
+}
+
+.btn {
+	border: 0;
+	border-radius: 30px;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-top: 1em;
+	padding: 1em;
+}
+.btn:hover {
+	box-shadow: 5px 5px 5px black;
+}
+.btn-block {
+	display: block;
+	width: 100%;
+}
+.btn-primary {
+	background-color: aqua;
+}
+
+/* grid */
+.grid {
+	display: grid;
+	gap: 0.5rem;
+}
+.grid-col-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+.grid-col-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+.grid-row-3 {
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.col-12 {
+	width: 100%;
+}
+
+.footer {
+}
