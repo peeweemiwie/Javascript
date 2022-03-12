@@ -26,46 +26,53 @@
 		<!-- Form to get user input -->
 		<div class="container">
 			<form id="dino-compare" class="card">
-				<section class="grid grid-col-4 col-12">
+				<h4>Tell me about yourself</h4>
+				<section class="grid grid-col-5 col-12">
 					<div class="card-group">
-						<label for="name" class="label-block">Name:</label>
-						<input id="name" class="form-field__full" type="text" name="name">
+						<label for="form-name" class="label-block">Name:</label>
+						<input id="form-name" type="text" name="name" required>
 					</div>
 					<div class="card-group">
 						<span class="label-block">Height:</span>
-						<label for="feet" class="label-block">feet
-							<input id="feet" type="number" name="feet">
+						<label for="form-feet" class="label-block">feet
+							<input id="form-feet" type="number" name="feet" required>
 						</label>
-						<label for="inch" class="label-block">inches
-							<input id="inches" type="number" name="inches">
+						<label for="form-inch" class="label-block">inches
+							<input id="form-inches" type="number" name="inches" required>
 						</label>
 					</div>
 					<div class="card-group">
-						<span class="label-block">Height:</span>
-						<label for="weight" class="label-block">
+						<span class="label-block">Weight:</span>
+						<label for="form-weight" class="label-block">
 							lbs
-							<input id="weight" class="btn-block" type="number" name="weight"></label>
+							<input id="form-weight" class="btn-block" type="number" name="weight" required></label>
 					</div>
 					<div class="card-group">
 						<span class="label-block">Diet:</span>
 						<label for="harbavor" class="label-group label-block">
-							<input type="radio" name="diet" id="harbavor" value="herbavor" checked> Herbavor
+							<input type="radio" name="form-diet" id="harbavor" value="herbavor" checked> Herbavor
 						</label>
 						<label for="omnivor" class="label-group label-block">
-							<input type="radio" name="diet" id="omnivor" value="omnivor"> Omnivor
+							<input type="radio" name="form-diet" id="omnivor" value="omnivor"> Omnivor
 						</label>
 						<label for="carnivor" class="label-group label-block">
-							<input type="radio" name="diet" id="carnivor" value="carnivor"> Carnivor
+							<input type="radio" name="form-diet" id="carnivor" value="carnivor"> Carnivor
+						</label>
+					</div>
+					<div class="card-group">
+						<label for="form-text" class="label-block">Something special:
+							<textarea id="form-text" class="btn-block" name="text" required>
+							</textarea>
 						</label>
 					</div>
 				</section>
 				<div>
-					<button id="btn" class="btn btn-block btn-primary">Compare Me!</button>
+					<button id="btn-submit" type="submit" class="btn btn-block type btn-primary">Compare Me!</button>
 				</div>
 			</form>
 		</div>
 
-		<section class="grid grid-col-3">
+		<section class="grid grid-col-3" id="grid">
 
 		</section>
 	</main>
@@ -74,6 +81,16 @@
 		<!-- <small class="fine-print">Data Sourced from <a href="https://www.wikipedia.org/">Wikipedia.org</a>, all numbers are
 			approximations.</small> -->
 	</footer>
+	<template id="template">
+		<div class="card tile" data-avatar>
+			<h4 data-species></h4>
+			<!-- <div class="avatar" data-avatar></div> -->
+			<dl>
+				<dt>Fact:</dt>
+				<dd data-fact></dd>
+			</dl>
+		</div>
+	</template>
 </body>
 
 </html>

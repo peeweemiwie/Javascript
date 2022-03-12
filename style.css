@@ -8,6 +8,7 @@
 	--bg-dark: #2e2e2e;
 	--roboto: 'Roboto', sans-serif;
 	--montserrat: 'Montserrat', sans-serif;
+	--avatarSize: 150px;
 }
 
 * {
@@ -35,6 +36,9 @@ h6 {
 
 button {
 	cursor: pointer;
+}
+input {
+	max-width: 100%;
 }
 
 .container {
@@ -98,6 +102,9 @@ button {
 .grid-col-4 {
 	grid-template-columns: repeat(4, 1fr);
 }
+.grid-col-5 {
+	grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
+}
 .grid-row-3 {
 	grid-template-rows: repeat(3, 1fr);
 }
@@ -107,4 +114,13 @@ button {
 }
 
 .footer {
+}
+
+.tile {
+	text-align: right;
+}
+[data-avatar] {
+	background-position: center left;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
