@@ -74,9 +74,9 @@ const handleSubmit = e =>
 		const newHuman = Human(name, feet, inches, weight, diet, fact);
 		console.log(newHuman);
 		localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newHuman));
-		compareWeight(newHuman.weight, newHuman.species);
-		compareHeight(newHuman.height, newHuman.species);
-		compareDiet(newHuman.diet, newHuman.species);
+		// compareWeight(newHuman.weight, newHuman.species);
+		// compareHeight(newHuman.height, newHuman.species);
+		// compareDiet(newHuman.diet, newHuman.species);
 		generateTiles(newHuman);
 	})();
 btnSubmit.addEventListener('click', e => handleSubmit(e));
